@@ -1,0 +1,11 @@
+
+
+Projeto: Como criar um relógio com HTML, CSS e JavaScript 
+
+Vídeo youtube: https://www.youtube.com/watch?v=FJGNnYG50gA 
+
+Canal: Manual do Dev 
+
+@ManualdoDev 
+
+manualdodev.com.br 
