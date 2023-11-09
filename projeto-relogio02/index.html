@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Relógio Digital</title>
+    <!--Parei em 05:53 do video-->
+  </head>
+  <body>
+    <ul id="relogio">
+      <li class="item-circulo" style="--clr: #d9ff02;">
+        <!-- a tag svg é para criar um circulo cx= coordenada do eixo x - cy coordenada do eixo y e r = raio -->
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="hh"></circle>
+        </svg>
+        <div id="horas"></div>
+      </li>
+      <li class="item-circulo" style="--clr: #d9ff02;">
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="hh"></circle>
+        </svg>
+        <div id="horas"></div>
+      </li>
+      <li class="item-circulo" style="--clr: #d9ff02;">
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="hh"></circle>
+        </svg>
+        <div id="horas">00</div>
+      </li>
+      <li class="ap">
+        <div id="ampm">AM</div>
+      </li>
+    </ul>
+  </body>
+</html>
