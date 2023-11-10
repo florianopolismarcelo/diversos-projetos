@@ -3,6 +3,10 @@ let minutos = document.getElementById("minutos")
 let segundos = document.getElementById("segundos")
 let ampm = document.getElementById("ampm")
 
+let hh = document.getElementById("hh")
+let mm = document.getElementById("mm")
+let ss = document.getElementById("ss")
+
 setInterval(() => {
   let h = new Date().getHours()
   let m = new Date().getMinutes()
@@ -24,4 +28,6 @@ setInterval(() => {
   minutos.innerHTML = m + "<br><span>Minutos</span>"
   segundos.innerHTML = s + "<br><span>Segundos</span>"
   ampm.innerHTML = amdDmd
+
+  hh.style.strokeDashoffset = 440 - (440 * h) / 12
 })
