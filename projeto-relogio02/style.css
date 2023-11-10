@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +16,11 @@ body {
 #relogio {
   display: flex;
   gap: 40px;
+  background: #2b2b2b;
+  padding: 20px 20px 20px 40px;
+  border: 2px solid #040305;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #8000ff;
 }
 .item-circulo {
   position: relative;
@@ -32,7 +39,9 @@ body {
   height: 100%;
   transform: rotate(270deg);
 }
-#horas, #minutos, #segundos {
+#horas,
+#minutos,
+#segundos {
   position: absolute;
   padding-top: 10px;
   font-weight: 500;
@@ -41,11 +50,13 @@ body {
   text-transform: uppercase;
   color: #fff;
 }
-#horas span, #minutos span, #segundos span {
+#horas span,
+#minutos span,
+#segundos span {
   display: block;
   margin-top: 10px;
-  font-size: .65em;
-  letter-spacing: .1em;
+  font-size: 0.65em;
+  letter-spacing: 0.1em;
 }
 #relogio .ap {
   list-style: none;
@@ -74,7 +85,7 @@ body {
   height: 103%;
 }
 .item-circulo .pontos::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 15px;
   height: 15px;

@@ -7,9 +7,9 @@ let hh = document.getElementById("hh")
 let mm = document.getElementById("mm")
 let ss = document.getElementById("ss")
 
-let hr_ponto = document.getElementById(".hr_ponto")
-let min_ponto = document.getElementById(".min_ponto")
-let seg_ponto = document.getElementById(".seg_ponto")
+let hr_ponto = document.querySelector(".hr_ponto")
+let min_ponto = document.querySelector(".min_ponto")
+let seg_ponto = document.querySelector(".seg_ponto")
 
 setInterval(() => {
   let h = new Date().getHours()
