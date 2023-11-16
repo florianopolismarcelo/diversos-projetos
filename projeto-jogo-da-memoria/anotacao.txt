@@ -4,6 +4,8 @@ Projeto: Jogo da memoria com JavaScript - Criando jogo com JavaScript, HTML e CS
 Vídeo youtube: Parte 01: https://www.youtube.com/watch?v=NV88N1r2Qkg&list=PLdtmpu_1ITQJJoH-5D0sU2Q2N0wwgPGCi
                Parte 02: https://www.youtube.com/watch?v=tcbMmm77WOU&list=PLdtmpu_1ITQJJoH-5D0sU2Q2N0wwgPGCi&index=2
 
+               Parou em 04:08hrs
+
 
 Canal: Manual do Dev 
 
