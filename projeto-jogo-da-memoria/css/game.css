@@ -4,7 +4,7 @@
   gap: 15px;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 .card {
   aspect-ratio: 3/4;
@@ -12,6 +12,7 @@
   background-color: #333;
   border-radius: 5px;
   position: relative;
+  transition: all 400ms ease;
 }
 .face {
   width: 100%;
@@ -22,5 +23,10 @@
   background-color: red;
 }
 .back {
-  background-color: blue;
+  background-image: url('../imagens/back.png');
+  background-size: cover;
+  background-position: center;
+}
+.card:hover {
+  transform: rotateY('180deg');
 }
