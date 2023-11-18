@@ -29,12 +29,17 @@ const createCard = (character) => {
   card.appendChild(front)
   card.appendChild(back)
 
+  card.addEventListener('click', revealCard);
+
   return card
 }
 
 const loadGame = () => {
 
   const duplicateCharacters = [...characters, ...characters];
+
+  const shuffledArrey = duplicateCharacters.sort(() => Math.random() -0.5);
+
   duplicateCharacters.forEach((character) => {
 
     const card = createCard(character)
