@@ -19,23 +19,22 @@ const createElement = (tag, className) => {
   return element
 }
 
-let firstCard = '';
-let secondCard = '';
+let firstCard = ""
+let secondCard = ""
 const revealCard = ({ target }) => {
-
-  if (target.parentNode.className.includes('reveal-card')) {
-    return;
+  if (target.parentNode.className.includes("reveal-card")) {
+    return
   }
-  target.parentNode.classList.add('reveal-card');
-}
-if (firstCard == '') {
-  target.parentNode.classList.add('reveal-card');
-  firstCard = target.parentNode;
-} else if (secondCard = '') {
   target.parentNode.classList.add("reveal-card")
-  secondCard = target.parentNode;
+}
+if (firstCard == "") {
+  target.parentNode.classList.add("reveal-card")
+  firstCard = target.parentNode
+} else if ((secondCard = "")) {
+  target.parentNode.classList.add("reveal-card")
+  secondCard = target.parentNode
 
-  checkCards();
+  checkCards()
 }
 const createCard = (character) => {
   const card = createElement("div", "card")
@@ -47,19 +46,18 @@ const createCard = (character) => {
   card.appendChild(front)
   card.appendChild(back)
 
-  card.addEventListener('click', revealCard);
+  card.addEventListener("click", revealCard)
+  card.setAttribute("data-character", character)
 
   return card
 }
 
 const loadGame = () => {
+  const duplicateCharacters = [...characters, ...characters]
 
-  const duplicateCharacters = [...characters, ...characters];
-
-  const shuffledArrey = duplicateCharacters.sort(() => Math.random() -0.5);
+  const shuffledArrey = duplicateCharacters.sort(() => Math.random() - 0.5)
 
   duplicateCharacters.forEach((character) => {
-
     const card = createCard(character)
     grid.appendChild(card)
   })
