@@ -21,6 +21,21 @@ const createElement = (tag, className) => {
 
 let firstCard = ""
 let secondCard = ""
+
+const checkCards = () => {
+  const firstCharacter = firstCard.getAtribute('data-character');
+  const secondCharacter = secondCard.getAtribute("data-character");
+
+  if (firstCharacter == secondCharacter) {
+
+  } else {
+    setTimeout(() => {
+      firstCard.classList.remove('reveal-card');
+      secondCard.classList.remove("reveal-card")
+    }, 500);
+  }
+
+}
 const revealCard = ({ target }) => {
   if (target.parentNode.className.includes("reveal-card")) {
     return
