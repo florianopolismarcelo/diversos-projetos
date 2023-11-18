@@ -28,10 +28,17 @@ const checkCards = () => {
 
   if (firstCharacter == secondCharacter) {
 
+    firstCard.classList.add('disable-card')
+    secondCard.classList.add("disable-card")
+
+
   } else {
     setTimeout(() => {
       firstCard.classList.remove('reveal-card');
-      secondCard.classList.remove("reveal-card")
+      secondCard.classList.remove("reveal-card");
+
+      firstCard = '';
+      secondCard = '';
     }, 500);
   }
 
