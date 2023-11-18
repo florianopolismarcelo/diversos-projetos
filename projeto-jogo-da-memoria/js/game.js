@@ -18,6 +18,13 @@ const createElement = (tag, className) => {
   element.className = className
   return element
 }
+const revealCard = ({ target }) => {
+
+  if (target.parentNode.className.includes('reveal-card')) {
+    return;
+  }
+  target.parentNode.classList.add('reveal-card');
+}
 
 const createCard = (character) => {
   const card = createElement("div", "card")
