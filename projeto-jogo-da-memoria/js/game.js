@@ -31,11 +31,13 @@ const checkCards = () => {
     firstCard.classList.add('disable-card')
     secondCard.classList.add("disable-card")
 
+     firstCard = ""
+     secondCard = ""
 
   } else {
     setTimeout(() => {
-      firstCard.classList.remove('reveal-card');
-      secondCard.classList.remove("reveal-card");
+      firstCard.firstChild.classList.remove('reveal-card');
+      secondCard.firstChild.classList.remove("reveal-card");
 
       firstCard = '';
       secondCard = '';
