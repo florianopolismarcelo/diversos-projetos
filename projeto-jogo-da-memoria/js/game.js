@@ -1,4 +1,6 @@
 const grid = document.querySelector(".grid")
+const spanPlayer = document.querySelector(".player")
+const timer = document.querySelector(".timer")
 
 const characters = [
   "beth",
@@ -13,7 +15,7 @@ const characters = [
   "scroopy",
 ]
 
-const createElement = (tag, className) => { 
+const createElement = (tag, className) => {
   const element = document.createElement(tag)
   element.className = className
   return element
@@ -23,37 +25,34 @@ let firstCard = ""
 let secondCard = ""
 
 const checkEndGame = () => {
-  const disabledCards = document.querySelectorAll('.disabled-card');
+  const disabledCards = document.querySelectorAll(".disabled-card")
 
   if (disabledCards.length == 20) {
-    alert('Parabéns! Você conseguiu')
+    alert("Parabéns! Você conseguiu")
   }
 }
 
 const checkCards = () => {
-  const firstCharacter = firstCard.getAtribute('data-character');
-  const secondCharacter = secondCard.getAtribute("data-character");
+  const firstCharacter = firstCard.getAtribute("data-character")
+  const secondCharacter = secondCard.getAtribute("data-character")
 
   if (firstCharacter == secondCharacter) {
-
-    firstCard.classList.add('disable-card')
+    firstCard.classList.add("disable-card")
     secondCard.classList.add("disable-card")
 
-     firstCard = ""
-     secondCard = ""
+    firstCard = ""
+    secondCard = ""
 
-     checkEndGame();
-
+    checkEndGame()
   } else {
     setTimeout(() => {
-      firstCard.firstChild.classList.remove('reveal-card');
-      secondCard.firstChild.classList.remove("reveal-card");
+      firstCard.firstChild.classList.remove("reveal-card")
+      secondCard.firstChild.classList.remove("reveal-card")
 
-      firstCard = '';
-      secondCard = '';
-    }, 500);
+      firstCard = ""
+      secondCard = ""
+    }, 500)
   }
-
 }
 const revealCard = ({ target }) => {
   if (target.parentNode.className.includes("reveal-card")) {
@@ -87,13 +86,21 @@ const createCard = (character) => {
 }
 
 const loadGame = () => {
-  const duplicateCharacters = [ ...characters, ...characters]
+  const duplicateCharacters = [...characters, ...characters]
 
-  const shuffledArrey = duplicateCharacters.sort(() => Math.random() - 0.5)
+  const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5)
 
-  duplicateCharacters.forEach((character) => {
+  shuffledArray.forEach((character) => {
     const card = createCard(character)
     grid.appendChild(card)
   })
 }
-loadGame()
+
+const startTimer = () => {
+  
+}
+
+window.onload = () => {
+  spanPlayer.innerHTML = localStorage.getItem("player")
+  loadGame()
+}
