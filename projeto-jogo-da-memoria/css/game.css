@@ -1,10 +1,31 @@
+/* main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url('../imagens/bg.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 50px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: red;
+  width: 100%;
+}
+*/
+
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
   width: 100%;
   max-width: 800px;
-  margin: 100px auto;
+  margin: 100px auto; /* para o video 3 colocar = margin: 0 auto;  */
 }
 .card {
   aspect-ratio: 3/4;
