@@ -97,10 +97,14 @@ const loadGame = () => {
 }
 
 const startTimer = () => {
-  
+  setInterval(() => {
+    const currentTime = +timer.innerHTML
+    timer.innerHTML = currentTime + 1
+  }, 1000)
 }
 
 window.onload = () => {
   spanPlayer.innerHTML = localStorage.getItem("player")
+  startTimer()
   loadGame()
 }
