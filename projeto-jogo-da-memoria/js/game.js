@@ -97,7 +97,7 @@ const loadGame = () => {
 }
 
 const startTimer = () => {
-  setInterval(() => {
+  this.loop = setInterval(() => {
     const currentTime = +timer.innerHTML
     timer.innerHTML = currentTime + 1
   }, 1000)
@@ -108,3 +108,7 @@ window.onload = () => {
   startTimer()
   loadGame()
 }
+
+console.log(this)
+
+//Continuar no terceiro video aos 19:50hrs
