@@ -13,7 +13,7 @@ const characters = [
   "scroopy",
 ]
 
-const createElement = (tag, className) => {
+const createElement = (tag, className) => { 
   const element = document.createElement(tag)
   element.className = className
   return element
@@ -87,7 +87,7 @@ const createCard = (character) => {
 }
 
 const loadGame = () => {
-  const duplicateCharacters = [...characters, ...characters]
+  const duplicateCharacters = [ ...characters, ...characters]
 
   const shuffledArrey = duplicateCharacters.sort(() => Math.random() - 0.5)
 
