@@ -1,8 +1,8 @@
- main {
+main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-image: url('../imagens/bg.jpg');
+  background-image: url("../imagens/bg.jpg");
   background-size: cover;
   min-height: 100vh;
   align-items: center;
@@ -29,7 +29,7 @@ header {
   gap: 15px;
   width: 100%;
   max-width: 800px;
-  margin: 100px auto; /* para o video 3 colocar = margin: 0 auto;  */
+  margin: 0px auto; 
 }
 .card {
   aspect-ratio: 3/4;
