@@ -21,6 +21,15 @@ const createElement = (tag, className) => {
 let firstCard = ""
 let secondCard = ""
 
+const checkEndGame = () => {
+  const disabledCards = document.querySelectorAll(".disabled-card")
+
+  if (disabledCards.length == 20) {
+    clearInterval(this.loop)
+    alert("Parabéns, você conseguiu")
+  }
+}
+
 const checkCards = () => {
   const firstCharacter = firstCard.getAttribute("data-character")
   const secondCharacter = secondCard.getAttribute("data-character")
@@ -49,12 +58,9 @@ const revealCard = ({ target }) => {
   }
 
   if (firstCard == "") {
-
     target.parentNode.classList.add("reveal-card")
     firstCard = target.parentNode
-
   } else if (secondCard == "") {
-
     target.parentNode.classList.add("reveal-card")
     secondCard = target.parentNode
 
