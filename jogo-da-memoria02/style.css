@@ -24,13 +24,13 @@
   border-radius: 5px;
 }
 .front {
-  background-image: url("imagens/beth.png");
+
   transform: rotateY(180deg);
 }
 .back {
   background-image: url("imagens/back.png");
   backface-visibility: hidden;
 }
-.card:hover {
+.reveal-card {
   transform: rotateY(180deg);
 }
