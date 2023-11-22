@@ -1,6 +1,5 @@
 const grid = document.querySelector(".grid")
 
-
 const characters = [
   "beth",
   "jerry",
@@ -18,6 +17,10 @@ const createElement = (tag, className) => {
   element.className = className
   return element
 }
+const revealCard = ({ target }) => {
+  target.parentNode.classList.add("reveal-card")
+}
+
 const createCard = (character) => {
   const card = createElement("div", "card")
   const front = createElement("div", "face front")
@@ -25,14 +28,15 @@ const createCard = (character) => {
 
   front.style.backgroundImage = `url('imagens/${character}.png')`
 
-
   card.appendChild(front)
   card.appendChild(back)
+
+  card.addEventListener("click", revealCard)
+  card.setAttribute("data-character", character)
 
   return card
 }
 const loadGame = () => {
-
   const duplicateCharacters = [...characters, ...characters]
 
   const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5)
@@ -42,6 +46,6 @@ const loadGame = () => {
     grid.appendChild(card)
   })
 }
-loadGame();
+loadGame()
 
-
+//PAROU EM 39:58
