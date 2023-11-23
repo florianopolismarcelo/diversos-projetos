@@ -30,6 +30,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+/* Celula */
 .cell:nth-child(1),
 .cell:nth-child(2),
 .cell:nth-child(3) {
@@ -50,6 +51,33 @@ body {
 .cell:nth-child(9) {
   border-right: none;
 }
+
+/* Criando o X */
+.cell.x::before,
+.cell.x::after {
+  content: "";
+  height: calc(100px * 0.15);
+  width: calc(100px * 0.9);
+  background: white;
+  position: absolute;
+}
+.cell.cell.x::before {
+  transform: rotate(45deg);
+}
+.cell.x::after {
+  transform: rotate(-45deg);
+}
+/* Criando o O */
+.cell.circle::before,
+.cell.circle::after {
+  content: "";
+  height: calc(100px * 0.9);
+  width: calc(100px * 0.9);
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+}
+/* Mensagem de vitória*/
 .winning-message {
   display: none;
 }
