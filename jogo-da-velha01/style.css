@@ -23,6 +23,10 @@ body {
   align-items: center;
   grid-template-columns: repeat(3, auto);
 }
+.board.x .cell:not(.circle):hover::after,
+.board.x .cell:not(.circle):hover::before {
+  background: rgba(255, 255, 255, .3) !important
+}
 /* Celula */
 .cell {
   width: 100px;
@@ -61,17 +65,21 @@ body {
 
 /* Criando o X */
 .cell.x::before,
-.cell.x::after {
+.cell.x::after,
+.board.x .cell:not(.circle):hover::after,
+.board.x .cell:not(.circle):hover::before {
   content: "";
   height: calc(100px * 0.15);
   width: calc(100px * 0.9);
   background: white;
   position: absolute;
 }
-.cell.cell.x::before {
+.cell.cell.x::before,
+.board.x .cell:not(.circle):hover::before {
   transform: rotate(45deg);
 }
-.cell.x::after {
+.cell.x::after,
+.board.x .cell:hover::after {
   transform: rotate(-45deg);
 }
 /* Criando o O */
