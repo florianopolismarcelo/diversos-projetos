@@ -23,9 +23,11 @@ body {
   align-items: center;
   grid-template-columns: repeat(3, auto);
 }
-.board.x .cell:not(.circle):hover::after,
-.board.x .cell:not(.circle):hover::before {
-  background: rgba(255, 255, 255, .3) !important
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+  background: rgba(255, 255, 255, 0.3) !important;
 }
 /* Celula */
 .cell {
@@ -84,7 +86,11 @@ body {
 }
 /* Criando o O */
 .cell.circle::before,
-.cell.circle::after {
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+  /* Mudei */
+
   content: "";
   height: calc(100px * 0.9);
   width: calc(100px * 0.9);
@@ -94,5 +100,32 @@ body {
 }
 /* Mensagem de vitória*/
 .winning-message {
-  display: none;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+}
+.winning-message-button {
+  font-size: 2.5rem;
+  background-color: rgba(65, 185, 131, 1);
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  margin-top: 16px;
+  color: white;
+}
+.winning-message-button:hover {
+  color: rgba(65, 185, 131, 1);
+  background-color: white;
+}
+.winning-message-text {
+  color: white;
+  font-size: 5rem;
 }
