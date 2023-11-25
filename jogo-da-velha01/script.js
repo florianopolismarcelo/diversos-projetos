@@ -1,13 +1,23 @@
 const cellElements = document.querySelectorAll("[data-cell]")
+const board = document.querySelector("[data-board]")
 
-let isCircleTurn;
+let isCircleTurn = false;
+
+const placeMark = (cell, classToAdd) => {
+    cell.classList.add (classToAdd);
+}
+
+const swapTurns = () => {
+    isCircleTurn = !isCircleTurn;
+}
 
 const handleClick = (e) => {
 // Colocar a marca do (X ou Circulo)
 const cell = e.target;
 const ClassToAdd = isCircleTurn ? "circle" : "x";
 
-cell.classList.add(ClassToAdd);
+
+placeMark(cell, ClassToAdd)
 // Verificar por vitórias
 // Verificar por empates
 // Mudar simbolo
