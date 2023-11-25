@@ -9,6 +9,17 @@ const placeMark = (cell, classToAdd) => {
 
 const swapTurns = () => {
     isCircleTurn = !isCircleTurn;
+
+    board.classList.remove("x");
+    board.classList.remove("circle");
+
+    if (isCircleTurn) {
+    board.classList.remove("circle");
+
+    }else {
+    board.classList.remove("x");
+
+    }
 }
 
 const handleClick = (e) => {
@@ -18,9 +29,12 @@ const ClassToAdd = isCircleTurn ? "circle" : "x";
 
 
 placeMark(cell, ClassToAdd)
+
 // Verificar por vitórias
 // Verificar por empates
 // Mudar simbolo
+
+swapTurns();
 
 }
 for (const cell of cellElements) {
