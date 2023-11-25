@@ -10,14 +10,13 @@ const placeMark = (cell, classToAdd) => {
 const swapTurns = () => {
     isCircleTurn = !isCircleTurn;
 
-    board.classList.remove("x");
     board.classList.remove("circle");
+    board.classList.remove("x");
 
     if (isCircleTurn) {
-    board.classList.remove("circle");
-
-    }else {
-    board.classList.remove("x");
+    board.classList.add("circle");
+    } else {
+    board.classList.add("x");
 
     }
 }
@@ -25,10 +24,10 @@ const swapTurns = () => {
 const handleClick = (e) => {
 // Colocar a marca do (X ou Circulo)
 const cell = e.target;
-const ClassToAdd = isCircleTurn ? "circle" : "x";
+const classToAdd = isCircleTurn ? "circle" : "x";
 
 
-placeMark(cell, ClassToAdd)
+placeMark(cell, classToAdd)
 
 // Verificar por vitórias
 // Verificar por empates
@@ -38,5 +37,5 @@ swapTurns();
 
 }
 for (const cell of cellElements) {
-    cell.addEventListener ("click", handleClick, { once: true });
+    cell.addEventListener("click", handleClick, { once: true });
 }
