@@ -31,9 +31,9 @@ const endGame = (isDraw) => {
     if (isDraw) {
         winningMessageTextElement.innerText = "Empate!"
     } else {
-        winningMessageTextElement.innerText = isCircleTurn ? "Circulo Venceu!" : "X Venceu!";
+        winningMessageTextElement.innerText = isCircleTurn ? "O Venceu!" : "X Venceu!";
     }
-    
+
     winningMessage.classList.add("show-winning-message")
 }
 
@@ -75,7 +75,7 @@ placeMark(cell, classToAdd)
 const isWin = checkForWin(classToAdd)
 
 if (isWin) {
-    endGame(true)
+    endGame(false)
 }
 // Verificar por empates
 // Mudar simbolo
