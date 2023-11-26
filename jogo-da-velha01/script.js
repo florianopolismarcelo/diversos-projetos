@@ -60,6 +60,12 @@ const classToAdd = isCircleTurn ? "circle" : "x";
 placeMark(cell, classToAdd)
 
 // Verificar por vitórias
+const isWin = checkForWin(classToAdd)
+
+if (isWin) {
+    
+    console.log("Winner")
+}
 // Verificar por empates
 // Mudar simbolo
 
