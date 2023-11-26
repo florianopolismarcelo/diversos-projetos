@@ -1,5 +1,8 @@
 const cellElements = document.querySelectorAll("[data-cell]")
 const board = document.querySelector("[data-board]")
+const winningMessageTextElement = document.querySelector("[data-winning-message-text]")
+const winningMessage = document.querySelector("[data-winning-message]")
+
 
 let isCircleTurn;
 
@@ -23,6 +26,15 @@ const startGame = () => {
 
     board.classList.add("x");
 
+}
+const endGame = (isDraw) => {
+    if (isDraw) {
+        winningMessageTextElement.innerText = "Empate!"
+    } else {
+        winningMessageTextElement.innerText = isCircleTurn ? "Circulo Venceu!" : "X Venceu!";
+    }
+    
+    winningMessage.classList.add("show-winning-message")
 }
 
 const checkForWin = (currentPlayer) => {
@@ -63,8 +75,7 @@ placeMark(cell, classToAdd)
 const isWin = checkForWin(classToAdd)
 
 if (isWin) {
-    
-    console.log("Winner")
+    endGame(true)
 }
 // Verificar por empates
 // Mudar simbolo
