@@ -55,9 +55,7 @@ const placeMark = (cell, classToAdd) => {
     cell.classList.add (classToAdd);
 }
 
-const swapTurns = () => {
-    isCircleTurn = !isCircleTurn;
-
+const setBoardHoverClass = () => {
     board.classList.remove("circle");
     board.classList.remove("x");
 
@@ -65,8 +63,16 @@ const swapTurns = () => {
     board.classList.add("circle");
     } else {
     board.classList.add("x");
-
     }
+}
+
+
+const swapTurns = () => {
+    isCircleTurn = !isCircleTurn;
+    
+    setBoardHoverClass();
+
+   
 }
 
 const handleClick = (e) => {
@@ -93,4 +99,3 @@ swapTurns();
 startGame();
 
 restartButton.addEventListener("click", startGame)
-
