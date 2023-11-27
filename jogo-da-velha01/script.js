@@ -20,22 +20,22 @@ const winningCombinations = [
 ]
 
 const startGame = () => {
+    isCircleTurn = false;
+
     for (const cell of cellElements) {
         cell.classList.remove("circle")
         cell.classList.remove("x")
         cell.removeEventListener("click", handleClick)
         cell.addEventListener("click", handleClick, { once: true });
     }
-    isCircleTurn = false;
 
-    board.classList.add("x");
-
+    setBoardHoverClass();
     winningMessage.classList.remove("show-winning-message")
 
 }
 const endGame = (isDraw) => {
     if (isDraw) {
-        winningMessageTextElement.innerText = "Empate!"
+        winningMessageTextElement.innerText = "Empate!";
     } else {
         winningMessageTextElement.innerText = isCircleTurn ? "O Venceu!" : "X Venceu!";
     }
@@ -69,7 +69,7 @@ const setBoardHoverClass = () => {
 
 const swapTurns = () => {
     isCircleTurn = !isCircleTurn;
-    
+
     setBoardHoverClass();
 
    
