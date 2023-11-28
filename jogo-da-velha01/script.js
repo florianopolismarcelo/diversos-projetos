@@ -1,9 +1,5 @@
 const cellElements = document.querySelectorAll("[data-cell]")
 const board = document.querySelector("[data-board]")
-const winningMessageTextElement = document.querySelector("[data-winning-message-text]")
-const winningMessage = document.querySelector("[data-winning-message]")
-const restartButton = document.querySelector("[data-restart-button]")
-
 
 let isCircleTurn;
 
@@ -15,47 +11,26 @@ const winningCombinations = [
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6],
+    [2, 4, 6]
    
 ]
 
 const startGame = () => {
-    isCircleTurn = false;
-
     for (const cell of cellElements) {
-        cell.classList.remove("circle")
-        cell.classList.remove("x")
-        cell.removeEventListener("click", handleClick)
         cell.addEventListener("click", handleClick, { once: true });
     }
+    isCircleTurn = false;
+    board.classList.add("x");
 
-    setBoardHoverClass();
-    winningMessage.classList.remove("show-winning-message")
-
-}
-const endGame = (isDraw) => {
-    if (isDraw) {
-        winningMessageTextElement.innerText = "Empate!";
-    } else {
-        winningMessageTextElement.innerText = isCircleTurn ? "O Venceu!" : "X Venceu!";
-    }
-
-    winningMessage.classList.add("show-winning-message")
-}
-
-const checkForWin = (currentPlayer) => {
-    return winningCombinations.some((combination) => {
-        return combination.every((index) => {
-            return cellElements[index].classList.contains(currentPlayer)
-        })
-    })
 }
 
 const placeMark = (cell, classToAdd) => {
     cell.classList.add (classToAdd);
 }
 
-const setBoardHoverClass = () => {
+const swapTurns = () => {
+    isCircleTurn = !isCircleTurn;
+
     board.classList.remove("circle");
     board.classList.remove("x");
 
@@ -63,16 +38,8 @@ const setBoardHoverClass = () => {
     board.classList.add("circle");
     } else {
     board.classList.add("x");
+
     }
-}
-
-
-const swapTurns = () => {
-    isCircleTurn = !isCircleTurn;
-
-    setBoardHoverClass();
-
-   
 }
 
 const handleClick = (e) => {
@@ -84,11 +51,6 @@ const classToAdd = isCircleTurn ? "circle" : "x";
 placeMark(cell, classToAdd)
 
 // Verificar por vitórias
-const isWin = checkForWin(classToAdd)
-
-if (isWin) {
-    endGame(false)
-}
 // Verificar por empates
 // Mudar simbolo
 
@@ -97,5 +59,3 @@ swapTurns();
 }
 
 startGame();
-
-restartButton.addEventListener("click", startGame)
