@@ -1,5 +1,9 @@
 const cellElements = document.querySelectorAll("[data-cell]")
 const board = document.querySelector("[data-board]")
+const winningMessageTextElement = document.querySelector("[data-winning-message-text]")
+const winningMessage = document.querySelector("[data-winning-message]")
+const restartButton = document.querySelector("[data-restart-button]")
+
 
 let isCircleTurn;
 
@@ -20,8 +24,27 @@ const startGame = () => {
         cell.addEventListener("click", handleClick, { once: true });
     }
     isCircleTurn = false;
+
     board.classList.add("x");
 
+    winningMessage.classList.remove("show-winning-message")
+}
+
+const endGame = (isDraw) => {
+    if (isDraw) {
+        winningMessageTextElement.innerText = "Empate!"
+    } else {
+        winningMessageTextElement.innerText = isCircleTurn ? "O Venceu!" : "X Venceu!";
+    }
+    winningMessage.classList.add("show-winning-message")
+}
+
+const checkForWin = (currentPlayer) => {
+    return winningCombinations.some((combination) => {
+        return combination.every((index) => {
+            return cellElements[index].classList.contains(currentPlayer)
+        })
+    })
 }
 
 const placeMark = (cell, classToAdd) => {
@@ -51,6 +74,10 @@ const classToAdd = isCircleTurn ? "circle" : "x";
 placeMark(cell, classToAdd)
 
 // Verificar por vitórias
+const isWin = checkForWin(classToAdd)
+if (isWin) {
+    endGame(false)
+}
 // Verificar por empates
 // Mudar simbolo
 
@@ -59,3 +86,5 @@ swapTurns();
 }
 
 startGame();
+
+restartButton.addEventListener("click", startGame)
