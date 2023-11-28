@@ -49,11 +49,19 @@ const checkForWin = (currentPlayer) => {
     })
 }
 
+const checkForDraw = () => {
+    return [ ... cellElements].every(cell => {
+       return cell.classList.contains("x") || cell.classList.contains("circle")
+
+    })
+}
+
+
 const placeMark = (cell, classToAdd) => {
     cell.classList.add (classToAdd);
 }
 
-const setBoardHoverClass = () {
+const setBoardHoverClass = () => {
     board.classList.remove("circle");
     board.classList.remove("x");
 
@@ -64,6 +72,7 @@ const setBoardHoverClass = () {
 
     }
 }
+
 
 const swapTurns = () => {
     isCircleTurn = !isCircleTurn;
@@ -80,16 +89,22 @@ const classToAdd = isCircleTurn ? "circle" : "x";
 placeMark(cell, classToAdd)
 
 // Verificar por vitórias
-const isWin = checkForWin(classToAdd)
-if (isWin) {
-    endGame(false)
-}
+const isWin = checkForWin(classToAdd);
+
+
 // Verificar por empates
+const isDraw = checkForDraw();
+
+if (isWin) {
+  endGame(false);
+} else if (isDraw) {
+  endGame(true)
+} else {
+    
 // Mudar simbolo
-
-swapTurns();
-
-}
+  swapTurns();
+  }
+};
 
 startGame();
 
