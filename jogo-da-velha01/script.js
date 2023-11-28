@@ -21,6 +21,9 @@ const winningCombinations = [
 
 const startGame = () => {
     for (const cell of cellElements) {
+        cell.classList.remove("circle")
+        cell.classList.remove("x")
+        cell.removeEventListener("click", handleClick)
         cell.addEventListener("click", handleClick, { once: true });
     }
     isCircleTurn = false;
