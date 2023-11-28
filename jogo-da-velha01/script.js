@@ -20,16 +20,15 @@ const winningCombinations = [
 ]
 
 const startGame = () => {
+      isCircleTurn = false;
     for (const cell of cellElements) {
         cell.classList.remove("circle")
         cell.classList.remove("x")
         cell.removeEventListener("click", handleClick)
         cell.addEventListener("click", handleClick, { once: true });
     }
-    isCircleTurn = false;
 
-    board.classList.add("x");
-
+    setBoardHoverClass();
     winningMessage.classList.remove("show-winning-message")
 }
 
@@ -54,9 +53,7 @@ const placeMark = (cell, classToAdd) => {
     cell.classList.add (classToAdd);
 }
 
-const swapTurns = () => {
-    isCircleTurn = !isCircleTurn;
-
+const setBoardHoverClass = () {
     board.classList.remove("circle");
     board.classList.remove("x");
 
@@ -66,6 +63,12 @@ const swapTurns = () => {
     board.classList.add("x");
 
     }
+}
+
+const swapTurns = () => {
+    isCircleTurn = !isCircleTurn;
+
+    setBoardHoverClass();
 }
 
 const handleClick = (e) => {
