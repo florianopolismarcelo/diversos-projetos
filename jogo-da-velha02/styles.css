@@ -2,6 +2,10 @@ h1 {
   color: blue;
 }
 
+div.row {
+  display: flex;
+}
+
 button.field {
   width: 100px;
   height: 100px;
