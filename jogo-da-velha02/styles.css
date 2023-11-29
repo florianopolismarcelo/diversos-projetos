@@ -11,7 +11,7 @@ html {
 
 h1 {
   
-  justify-content: center;
+  text-align: center;
   color: #f5b324;
   font-weight: 100;
 }
@@ -35,8 +35,12 @@ button.field {
   border: none;
   cursor: pointer;
   font-size: 80px;
-  background-color: #404044;
-  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(65, 185, 131, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: black;
 }
 button:hover {
   filter: brightness(150%);
