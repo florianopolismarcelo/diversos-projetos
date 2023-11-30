@@ -1,10 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  width: 100vw;
+  height: 90vh;
+  margin-top: 10px;
+  background-color: goldenrod;
+  font-family: "Ubuntu", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 #imagem {
-  background-image: url("imagens/forca06.png");
+  background-image: url("imagens/forca.png");
   width: 234px;
   height: 272px;
   background-repeat: no-repeat;

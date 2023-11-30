@@ -1,3 +1,4 @@
 video 01 =  https://www.youtube.com/watch?v=OvxbtRLUgXY&t=8s
 
+video 02 =  https://www.youtube.com/watch?v=Tkd-5oQuk0k&t=31s
 
