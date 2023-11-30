@@ -8,5 +8,7 @@ video 04 =  https://www.youtube.com/watch?v=FVk54zsBP9I
 
 video 05 =  https://www.youtube.com/watch?v=4tTAft3SYis
 
+video 06 =  https://www.youtube.com/watch?v=8lVMPLPEH9c
+
 
 
