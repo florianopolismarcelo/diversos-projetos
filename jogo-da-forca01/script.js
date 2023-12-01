@@ -1068,9 +1068,11 @@ function montarPalavraNaTela() {
   }
 }
 function verificaLetraEscolhida(letra) {
+  document.getElementById("tecla-" + letra).disabled = true
   if (tentativas > 0) {
     mudarStyleLetra("tecla-" + letra)
     comparaListas(letra)
+    montarPalavraNaTela()
   }
 }
 function mudarStyleLetra(tecla) {
@@ -1081,8 +1083,12 @@ function comparaListas(letra) {
   const pos = palavraSecretaSorteada.indexOf(letra)
   if (pos < 0) {
     tentativas--
-    //aparecer imagem
-    //verificar se ainda tem tentativas // mensagem
+    carregaImagemForca() //aparecer imagem
+
+    if (tentativas == 0) 
+    {
+      abreModal() // mensagem
+    }
   } else {
     for (i = 0; i < palavraSecretaSorteada.length; i++) {
       if (palavraSecretaSorteada[i] == letra) {
@@ -1100,4 +1106,42 @@ function comparaListas(letra) {
     //MENSAGEM NA TELA
     tentativas = 0
   }
+}
+function carregaImagemForca() {
+  switch (tentativas) {
+    case 5:
+      document.getElementById("imagem").style.background =
+        "url('imagens/forca01.png')"
+      break
+    case 4:
+      document.getElementById("imagem").style.background =
+        "url('imagens/forca02.png')"
+      break
+    case 3:
+      document.getElementById("imagem").style.background =
+        "url('imagens/forca03.png')"
+      break
+
+    case 2:
+      document.getElementById("imagem").style.background =
+        "url('imagens/forca04.png')"
+      break
+    case 1:
+      document.getElementById("imagem").style.background =
+        "url('imagens/forca05.png')"
+      break
+    case 0:
+      document.getElementById("imagem").style.background =
+        "url('imagens/forca06.png')"
+      break
+    default:
+      document.getElementById("imagem").style.background =
+        "url('imagens/forca.png')"
+      break
+  }
+}
+function abreModal() {
+  $("#myModal").modal({
+    show: true,
+  })
 }

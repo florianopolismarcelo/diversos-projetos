@@ -58,6 +58,9 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 900;
 }
+ .tecla > button:disabled {
+   cursor: not-allowed;
+ }
 .tecla > button:hover {
   transform: scale(1.3);
 }
