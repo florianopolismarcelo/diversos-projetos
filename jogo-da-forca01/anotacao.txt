@@ -14,4 +14,9 @@ video 07 =  https://www.youtube.com/watch?v=XygOcXc86og
 
 video 08 =  https://www.youtube.com/watch?v=wiiYgmHJ0Ww
 
+video 09 =  https://www.youtube.com/watch?v=jdVokZbgqzU     Esse video tem uma explicação muito importante no 7:23 minutos
+
+video 10 =  https://www.youtube.com/watch?v=aqSFMK3QClc    Esse video no inicio também tem uma explicação importante
+
+
 
