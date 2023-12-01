@@ -10,5 +10,8 @@ video 05 =  https://www.youtube.com/watch?v=4tTAft3SYis
 
 video 06 =  https://www.youtube.com/watch?v=8lVMPLPEH9c
 
+video 07 =  https://www.youtube.com/watch?v=XygOcXc86og
+
+video 08 =  https://www.youtube.com/watch?v=wiiYgmHJ0Ww
 
 
