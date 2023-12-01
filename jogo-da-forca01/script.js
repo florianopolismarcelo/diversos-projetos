@@ -1066,3 +1066,11 @@ function montarPalavraNaTela() {
     }
   }
 }
+function verificaLetraEscolhida(letra) {
+  mudarStyleLetra("tecla-" + letra);
+}
+function mudarStyleLetra(tecla) {
+  document.getElementById(tecla).style.background = "#8b008b"
+  document.getElementById(tecla).style.color = "#ffffff"
+
+}

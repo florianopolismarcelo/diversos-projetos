@@ -45,7 +45,7 @@ body {
 #teclado {
   margin-top: 30px;
 }
-.teclas > button {
+.tecla > button {
   width: 24px;
   height: 24px;
   margin: 2px;
@@ -58,7 +58,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 900;
 }
-.teclas > button:hover {
+.tecla > button:hover {
   transform: scale(1.3);
 }
 #categoria {
@@ -67,7 +67,7 @@ body {
   font-size: 1.2em;
 }
 @media (min-width: 321px) {
-  .teclas > button {
+  .tecla > button {
     width: 25px;
     height: 25px;
   }
@@ -76,7 +76,7 @@ body {
   }
 }
 @media (min-width: 376px) {
-  .teclas > button {
+  .tecla > button {
     width: 30px;
     height: 30px;
   }
@@ -91,7 +91,7 @@ body {
   }
 }
 @media (min-width: 426px) {
-  .teclas > button {
+  .tecla > button {
     width: 36px;
     height: 36px;
   }
@@ -106,7 +106,7 @@ body {
   }
 }
 @media (min-width: 769px) {
-  .teclas > button {
+  .tecla > button {
     width: 68px;
     height: 68px;
     font-size: 2em;
