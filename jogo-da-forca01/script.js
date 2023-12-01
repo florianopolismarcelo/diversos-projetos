@@ -655,6 +655,382 @@ const palavras = [
     nome: "TATU",
     categoria: "ANIMAIS",
   }),
+  (palavra164 = {
+    nome: "ARROZ",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra165 = {
+    nome: "BISCOITO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra166 = {
+    nome: "ACHOCOLATADO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra167 = {
+    nome: "AZEITE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra168 = {
+    nome: "FARINHA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra169 = {
+    nome: "PRESUNTO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra170 = {
+    nome: "MARGARINA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra171 = {
+    nome: "PIPOCA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra172 = {
+    nome: "AÇUCAR",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra173 = {
+    nome: "FRANGO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra174 = {
+    nome: "CARNE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra175 = {
+    nome: "CERVEJA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra176 = {
+    nome: "MANTEIGA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra177 = {
+    nome: "LEITE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra178 = {
+    nome: "REFRIGERANTE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra179 = {
+    nome: "DETERGENTE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra180 = {
+    nome: "SABONETE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra181 = {
+    nome: "CHAMPOO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra182 = {
+    nome: "IORGUTE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra183 = {
+    nome: "AMACIANTE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra184 = {
+    nome: "ESPONJA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra185 = {
+    nome: "DESODORANTE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra186 = {
+    nome: "FERMENTO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra187 = {
+    nome: "GELATINA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra188 = {
+    nome: "VINAGRE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra189 = {
+    nome: "DESINFETANTE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra190 = {
+    nome: "GUARDANAPO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra191 = {
+    nome: "QUEIJO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra192 = {
+    nome: "PRESUNTO",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra193 = {
+    nome: "SALSICHA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra194 = {
+    nome: "LINGUIÇA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra195 = {
+    nome: "MAIONESE",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra196 = {
+    nome: "MOSTARDA",
+    categoria: "LISTA DE COMPRAS EM SUPERMERCADO",
+  }),
+  (palavra197 = {
+    nome: "BERINJELA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra198 = {
+    nome: "SALSA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra199 = {
+    nome: "ALFACE",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra200 = {
+    nome: "CHUCHU",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra201 = {
+    nome: "ESPINAFRE",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra202 = {
+    nome: "LENTILHA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra203 = {
+    nome: "PALMITO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra204 = {
+    nome: "QUIABO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra205 = {
+    nome: "VAGEM",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra206 = {
+    nome: "BETERRABA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra207 = {
+    nome: "ERVILHA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra208 = {
+    nome: "INHAME",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra209 = {
+    nome: "PEPINO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra210 = {
+    nome: "MANDIOCA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra211 = {
+    nome: "RABANETE",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra212 = {
+    nome: "MILHO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra213 = {
+    nome: "NABO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra214 = {
+    nome: "RUCULA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra215 = {
+    nome: "CENOURA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra216 = {
+    nome: "BATATA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra217 = {
+    nome: "CEBOLA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra218 = {
+    nome: "COUVE",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra219 = {
+    nome: "ALFACE",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra220 = {
+    nome: "PEPINO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra221 = {
+    nome: "TOMATE",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra222 = {
+    nome: "REPOLHO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra223 = {
+    nome: "CEBOLINHA",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra224 = {
+    nome: "GENGIBRE",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra225 = {
+    nome: "NABO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra226 = {
+    nome: "MAXIXE",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra227 = {
+    nome: "ALHO",
+    categoria: "HORTALIÇAS",
+  }),
+  (palavra228 = {
+    nome: "SAFIRA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra229 = {
+    nome: "MEL",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra230 = {
+    nome: "BOB",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra231 = {
+    nome: "NICK",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra232 = {
+    nome: "MAX",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra233 = {
+    nome: "LOLA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra234 = {
+    nome: "BELINHA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra235 = {
+    nome: "CACAU",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra236 = {
+    nome: "PANDORA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra237 = {
+    nome: "SIMBA",
+    ccategoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra238 = {
+    nome: "TOM",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra239 = {
+    nome: "CHICO",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra240 = {
+    nome: "FRAJOLA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra241 = {
+    nome: "FRED",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra242 = {
+    nome: "MIA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra243 = {
+    nome: "LUNA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra244 = {
+    nome: "NALA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra245 = {
+    nome: "APOLO",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra246 = {
+    nome: "CANJICA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra247 = {
+    nome: "FAROFA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra248 = {
+    nome: "PAÇOCA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra249 = {
+    nome: "PITOCO",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra250 = {
+    nome: "RAMBO",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra251 = {
+    nome: "FRIDA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra252 = {
+    nome: "LILI",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra253 = {
+    nome: "DUQUE",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra254 = {
+    nome: "JUJUBA",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra255 = {
+    nome: "BAMBAM",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra256 = {
+    nome: "MIMI",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
+  (palavra257 = {
+    nome: "FOGUETE",
+    categoria: "NOMES DE CACHORROS OU GATOS",
+  }),
 ]
 criarPalavraSecreta()
 function criarPalavraSecreta() {
