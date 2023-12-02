@@ -950,7 +950,7 @@ const palavras = [
   }),
   (palavra237 = {
     nome: "SIMBA",
-    ccategoria: "NOMES DE CACHORROS OU GATOS",
+    categoria: "NOMES DE CACHORROS OU GATOS",
   }),
   (palavra238 = {
     nome: "TOM",
@@ -1032,6 +1032,22 @@ const palavras = [
     nome: "FOGUETE",
     categoria: "NOMES DE CACHORROS OU GATOS",
   }),
+  (palavra258 = {
+    nome: "TELA QUENTE",
+    categoria: "TV E CINEMA",
+  }),
+  (palavra259 = {
+    nome: "BOB ESPONJA",
+    categoria: "TV E CINEMA",
+  }),
+  (palavra260 = {
+    nome: "HOMEN ARANHA",
+    categoria: "TV E CINEMA",
+  }),
+  (palavra261 = {
+    nome: "REI DO GADO",
+    categoria: "TV E CINEMA",
+  }),
 ]
 criarPalavraSecreta()
 function criarPalavraSecreta() {
@@ -1050,23 +1066,33 @@ function montarPalavraNaTela() {
   const palavraTela = document.getElementById("palavra-secreta")
   palavraTela.innerHTML = ""
 
+  console.log(palavraSecretaSorteada)
+
   for (i = 0; i < palavraSecretaSorteada.length; i++) {
     if (ListaDinamica[i] == undefined) {
-      ListaDinamica[i] = "&nbsp;"
-      palavraTela.innerHTML =
-        palavraTela.innerHTML +
-        "<div class='letras'>" +
-        ListaDinamica[i] +
-        "</div>"
-    } else {
-      palavraTela.innerHTML =
-        palavraTela.innerHTML +
-        "<div class='letras'>" +
-        ListaDinamica[i] +
-        "</div>"
+         if (palavraSecretaSorteada[i] == " ") {
+            ListaDinamica[i] = " "
+             palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspacos'>" + ListaDinamica[i] + "</div>"
+          }
+          else {
+              ListaDinamica[i] = "&nbsp;"
+               palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + ListaDinamica[i] + "</div>"
+          }
+      }
+      else {
+          if (palavraSecretaSorteada[i] == " ") {
+          ListaDinamica[i] = " "
+          palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspacos'>" + ListaDinamica[i] + "</div>"
+      } 
+       else {
+        palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + ListaDinamica[i] + "</div>"
     }
   }
+  console.log(ListaDinamica)
 }
+
+
+
 function verificaLetraEscolhida(letra) {
   document.getElementById("tecla-" + letra).disabled = true
   if (tentativas > 0) {
