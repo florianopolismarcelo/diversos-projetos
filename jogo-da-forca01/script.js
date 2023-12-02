@@ -1066,44 +1066,42 @@ function montarPalavraNaTela() {
   const palavraTela = document.getElementById("palavra-secreta")
   palavraTela.innerHTML = ""
 
-  console.log(palavraSecretaSorteada)
-
   for (i = 0; i < palavraSecretaSorteada.length; i++) {
     if (ListaDinamica[i] == undefined) {
-         if (palavraSecretaSorteada[i] == " ") {
-            ListaDinamica[i] = " "
-             palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspacos'>" + ListaDinamica[i] + "</div>"
-          }
-          else {
-              ListaDinamica[i] = "&nbsp;"
-               palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + ListaDinamica[i] + "</div>"
-          }
-      }
-      else {
-          if (palavraSecretaSorteada[i] == " ") {
-          ListaDinamica[i] = " "
-          palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspacos'>" + ListaDinamica[i] + "</div>"
-      } 
-       else {
+      if (palavraSecretaSorteada[i] == " ") {
+        ListaDinamica[i] = " "
+        palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspacos'>" + ListaDinamica[i] + "</div>"
+      } else {
+        ListaDinamica[i] = "&nbsp;"
         palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + ListaDinamica[i] + "</div>"
+      }
+    } else {
+      if (palavraSecretaSorteada[i] == " ") {
+        ListaDinamica[i] = " "
+        palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspacos'>" + ListaDinamica[i] + "</div>"
+      } else {
+        palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + ListaDinamica[i] + "</div>"
+      }
     }
   }
-  console.log(ListaDinamica)
 }
-
-
 
 function verificaLetraEscolhida(letra) {
   document.getElementById("tecla-" + letra).disabled = true
   if (tentativas > 0) {
-    mudarStyleLetra("tecla-" + letra)
+    mudarStyleLetra("tecla-" + letra, false)
     comparaListas(letra)
     montarPalavraNaTela()
   }
 }
-function mudarStyleLetra(tecla) {
-  document.getElementById(tecla).style.background = "#8b008b"
-  document.getElementById(tecla).style.color = "#ffffff"
+function mudarStyleLetra(tecla, condicao) {
+  if(condicao == false) {
+     document.getElementById(tecla).style.background = "#8b008b"
+     document.getElementById(tecla).style.color = "#ffffff"
+  }else {
+     document.getElementById(tecla).style.background = "#008000" 
+     document.getElementById(tecla).style.color = "#ffffff"
+  }
 }
 function comparaListas(letra) {
   const pos = palavraSecretaSorteada.indexOf(letra)
@@ -1118,6 +1116,7 @@ function comparaListas(letra) {
       ) // mensagem
     }
   } else {
+    mudarStyleLetra("tecla-" + letra, true)
     for (i = 0; i < palavraSecretaSorteada.length; i++) {
       if (palavraSecretaSorteada[i] == letra) {
         ListaDinamica[i] = letra
