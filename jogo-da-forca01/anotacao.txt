@@ -20,5 +20,8 @@ video 10 =  https://www.youtube.com/watch?v=aqSFMK3QClc     Esse video no inicio
 
 video 11 =  https://www.youtube.com/watch?v=ZhhgCOhIgNY
 
+video 12 =  https://www.youtube.com/watch?v=BnBGpExwlJI&t=7s
+
+video 13 =  https://www.youtube.com/watch?v=layAF1DbJE8  parei aqui continuar daqui
 
 
