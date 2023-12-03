@@ -1,3 +1,4 @@
+let  jogarNovamente = true;
 let = tentativas = 6
 let ListaDinamica = []
 let palavraSecretaCategoria
@@ -1103,7 +1104,7 @@ function mudarStyleLetra(tecla, condicao) {
      document.getElementById(tecla).style.color = "#ffffff"
   }
 }
-function comparaListas(letra) {
+async function comparaListas(letra) {
   const pos = palavraSecretaSorteada.indexOf(letra)
   if (pos < 0) {
     tentativas--
@@ -1134,7 +1135,19 @@ function comparaListas(letra) {
     abreModal("PARABÉNS! VOCÊ ACERTOU...", "🏆") // mensagem
 
     tentativas = 0
+
+    while (jogarNovamente == true) {
+      document.getElementById("btnReiniciar").style.backgroundColor = 'red';
+
+      await atraso(500)
+      document.getElementById("btnReiniciar").style.backgroundColor = 'yellow';
+      await atraso(500)
+
+    }
   }
+}
+async function atraso(tempo){
+  return new Promise(x => setTimeout(x, tempo)) 
 }
 function carregaImagemForca() {
   switch (tentativas) {
