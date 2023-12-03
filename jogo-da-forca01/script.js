@@ -1104,7 +1104,7 @@ function mudarStyleLetra(tecla, condicao) {
      document.getElementById(tecla).style.color = "#ffffff"
   }
 }
-async function comparaListas(letra) {
+function comparaListas(letra) {
   const pos = palavraSecretaSorteada.indexOf(letra)
   if (pos < 0) {
     tentativas--
@@ -1115,6 +1115,7 @@ async function comparaListas(letra) {
         "OPS! VOCÊ ERROU.",
         "A PALAVRA SECRETA SERIA = " + palavraSecretaSorteada
       ) // mensagem
+      piscarBotaoJogarNovamente()
     }
   } else {
     mudarStyleLetra("tecla-" + letra, true)
@@ -1133,18 +1134,22 @@ async function comparaListas(letra) {
   if (vitoria == true) {
     //MENSAGEM NA TELA
     abreModal("PARABÉNS! VOCÊ ACERTOU...", "🏆") // mensagem
-
     tentativas = 0
+    piscarBotaoJogarNovamente()
 
-    while (jogarNovamente == true) {
+  }
+}
+async function piscarBotaoJogarNovamente() {
+  while (jogarNovamente == true) {
       document.getElementById("btnReiniciar").style.backgroundColor = 'red';
-
+      document.getElementById("btnReiniciar").style.scale = 1.3;
       await atraso(500)
+
       document.getElementById("btnReiniciar").style.backgroundColor = 'yellow';
+      document.getElementById("btnReiniciar").style.scale = 1;
       await atraso(500)
 
     }
-  }
 }
 async function atraso(tempo){
   return new Promise(x => setTimeout(x, tempo)) 
@@ -1195,5 +1200,6 @@ function abreModal(titulo, mensagem) {
 }
 let btnReiniciar = document.querySelector("#btnReiniciar")
 btnReiniciar.addEventListener("click", function () {
+  jogarNovamente = false;
   location.reload()
 })
