@@ -1,4 +1,4 @@
-let  jogarNovamente = true;
+let jogarNovamente = true
 let = tentativas = 6
 let ListaDinamica = []
 let palavraSecretaCategoria
@@ -1071,17 +1071,33 @@ function montarPalavraNaTela() {
     if (ListaDinamica[i] == undefined) {
       if (palavraSecretaSorteada[i] == " ") {
         ListaDinamica[i] = " "
-        palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspacos'>" + ListaDinamica[i] + "</div>"
+        palavraTela.innerHTML =
+          palavraTela.innerHTML +
+          "<div class='letrasEspacos'>" +
+          ListaDinamica[i] +
+          "</div>"
       } else {
         ListaDinamica[i] = "&nbsp;"
-        palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + ListaDinamica[i] + "</div>"
+        palavraTela.innerHTML =
+          palavraTela.innerHTML +
+          "<div class='letras'>" +
+          ListaDinamica[i] +
+          "</div>"
       }
     } else {
       if (palavraSecretaSorteada[i] == " ") {
         ListaDinamica[i] = " "
-        palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspacos'>" + ListaDinamica[i] + "</div>"
+        palavraTela.innerHTML =
+          palavraTela.innerHTML +
+          "<div class='letrasEspacos'>" +
+          ListaDinamica[i] +
+          "</div>"
       } else {
-        palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + ListaDinamica[i] + "</div>"
+        palavraTela.innerHTML =
+          palavraTela.innerHTML +
+          "<div class='letras'>" +
+          ListaDinamica[i] +
+          "</div>"
       }
     }
   }
@@ -1096,12 +1112,12 @@ function verificaLetraEscolhida(letra) {
   }
 }
 function mudarStyleLetra(tecla, condicao) {
-  if(condicao == false) {
-     document.getElementById(tecla).style.background = "#8b008b"
-     document.getElementById(tecla).style.color = "#ffffff"
-  }else {
-     document.getElementById(tecla).style.background = "#008000" 
-     document.getElementById(tecla).style.color = "#ffffff"
+  if (condicao == false) {
+    document.getElementById(tecla).style.background = "#8b008b"
+    document.getElementById(tecla).style.color = "#ffffff"
+  } else {
+    document.getElementById(tecla).style.background = "#008000"
+    document.getElementById(tecla).style.color = "#ffffff"
   }
 }
 function comparaListas(letra) {
@@ -1136,23 +1152,21 @@ function comparaListas(letra) {
     abreModal("PARABÉNS! VOCÊ ACERTOU...", "🏆") // mensagem
     tentativas = 0
     piscarBotaoJogarNovamente()
-
   }
 }
 async function piscarBotaoJogarNovamente() {
   while (jogarNovamente == true) {
-      document.getElementById("btnReiniciar").style.backgroundColor = 'red';
-      document.getElementById("btnReiniciar").style.scale = 1.3;
-      await atraso(500)
+    document.getElementById("btnReiniciar").style.backgroundColor = "red"
+    document.getElementById("btnReiniciar").style.scale = 1.3
+    await atraso(500)
 
-      document.getElementById("btnReiniciar").style.backgroundColor = 'yellow';
-      document.getElementById("btnReiniciar").style.scale = 1;
-      await atraso(500)
-
-    }
+    document.getElementById("btnReiniciar").style.backgroundColor = "yellow"
+    document.getElementById("btnReiniciar").style.scale = 1
+    await atraso(500)
+  }
 }
-async function atraso(tempo){
-  return new Promise(x => setTimeout(x, tempo)) 
+async function atraso(tempo) {
+  return new Promise((x) => setTimeout(x, tempo))
 }
 function carregaImagemForca() {
   switch (tentativas) {
@@ -1200,6 +1214,6 @@ function abreModal(titulo, mensagem) {
 }
 let btnReiniciar = document.querySelector("#btnReiniciar")
 btnReiniciar.addEventListener("click", function () {
-  jogarNovamente = false;
+  jogarNovamente = false
   location.reload()
 })

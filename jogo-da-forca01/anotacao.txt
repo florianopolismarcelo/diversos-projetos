@@ -33,3 +33,11 @@ video 16 = https://www.youtube.com/watch?v=rnEztCX9GIg&t=7s
 video 17 = https://www.youtube.com/watch?v=aOhf_VV5ysY&t=25s
 
 
+Projeto já terminou, porém vai até o vídeo 25 pois pedem para acrescentar novas funcionalidades, parei pois preciso aprender fazer para todas as telas 
+
+
+Canal: Agnaldo Guimarães
+
+@AgnaldoGuimaraes
+
+linkedin.com/in/agnaldo-santos-guimarães-989627198
